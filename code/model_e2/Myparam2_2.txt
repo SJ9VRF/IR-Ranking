@@ -1,0 +1,35 @@
+<parameters>
+<!-- Retrieval model selection -->
+<!-- 0 TFIDF 1 Okapi 2 KL-Divergence -->
+<retModel>2</retModel>
+<!-- Basic retrieval parameters -->
+<!-- database index -->
+<index>document_index/index.key</index>
+<!-- query text stream -->
+<textQuery>query/topics.stemmed.xml</textQuery>
+<!-- result file -->
+<resultFile>exe2/myresult2_2.txt</resultFile>
+<!-- how many docs to return as the result -->
+<resultCount>1000</resultCount>
+<!-- weighting parameters -->
+<BM25K1>1.2</BM25K1>
+<BM25B>0.75</BM25B>
+<BM25K3>7</BM25K3>
+<BM25QTF>0.5</BM25QTF>
+
+<!-- this is not needed by Okapi or TFIDF, but by SimpleKL -->
+<smoothSupportFile>mysupp_param.txt</smoothSupportFile>
+
+<!-- interpolation rather than backoff, 0 interpolate, 1 backoff -->
+<smoothStrategy>0</smoothStrategy>
+<!-- Jelinek-Mercer 0 Bayesian/Dirichlet prior 1 Abs. Discount 2 -->
+<smoothMethod>2</smoothMethod>
+<!-- not used since smoothMethod is Dirichlet prior -->
+<discoutDelta>0.5</discoutDelta>
+<!-- not used since smoothMethod is Dirichlet prior -->
+<JelinekMercerLambda>0.5</JelinekMercerLambda>
+<DirichletPrior>2000</DirichletPrior>
+
+<!-- 0 simple format 1 TREC-format -->
+<resultFormat>1</resultFormat>
+</parameters>

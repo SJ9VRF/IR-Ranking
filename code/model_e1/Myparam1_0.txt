@@ -1,0 +1,21 @@
+<parameters>
+<!-- Retrieval model selection -->
+<!-- 0 TFIDF 1 Okapi 2 KL-Divergence -->
+<retModel>0</retModel>
+<!-- Basic retrieval parameters -->
+<!-- database index -->
+<index>document_index/index.key</index>
+<!-- query text stream -->
+<textQuery>query/topics.stemmed.xml</textQuery>
+<!-- result file -->
+<resultFile>exe1/myresult1_0.txt</resultFile>
+<!-- how many docs to return as the result -->
+<resultCount>1000</resultCount>
+<!-- weighting parameters -->
+<BM25K1>1.2</BM25K1>
+<BM25B>0.75</BM25B>
+<BM25K3>7</BM25K3>
+<BM25QTF>0.5</BM25QTF>
+<!-- 0 simple format 1 TREC-format -->
+<resultFormat>1</resultFormat>
+</parameters>
